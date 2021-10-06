@@ -86,7 +86,7 @@ const getDuration=(duration,remaining,point,count=0,string='')=>{
  * ```
  * */
 const getDurationString = duration => {
-    return getDuration(duration, duration, suffixes.length - 1);
+    return getDuration(duration, duration, suffixes.length - 1).trim();
 }
 
 export default {
