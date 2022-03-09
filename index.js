@@ -57,7 +57,7 @@ const durations=[60,60*60,60*60*24,60*60*24*7];
 
 const getDuration=(duration,remaining,point,count=0,string='')=>{
   if(duration<=0) return '0s';
-  if(point<=0) return `${string} ${remaining}${suffixes[point]}`;
+  if(point<=0) return `${string} ${Math.floor(remaining)}${suffixes[point]}`;
   
   if(duration>=remaining){
     const max = durations[point-1];
